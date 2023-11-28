@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Bar Chart with Searchable Country Selection</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS File -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+    <h2>2020 GDP Visualization</h2>
+    <h5>Select the countries you want to have displayed in the bar chart (up to 10):</h5>
+    <select id="countrySelect" multiple="multiple" style="width: 300px;"></select>
+    <div id="chart"></div>
+
+    <!-- Tooltip Container -->
+    <div id="tooltip" style="opacity: 0; position: absolute; pointer-events: none; padding: 10px; background: white; border: 1px solid #ccc; border-radius: 5px;"></div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

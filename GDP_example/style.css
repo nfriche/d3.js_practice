@@ -1,0 +1,65 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #444;
+    text-align: center;
+}
+
+/* Style for Select2 Component */
+.select2-container--default .select2-selection--multiple {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #007bff;
+    border-color: #006fe6;
+    color: #fff;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+/* Style for the Chart */
+#chart {
+    margin-top: 20px;
+}
+
+.bar {
+    fill: #007bff;
+}
+
+.bar:hover {
+    fill: #0056b3;
+}
+
+/* Style for the Tooltip */
+#tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Additional styles (optional) */
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
