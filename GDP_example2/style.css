@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+body, html {
+    font-family: 'Roboto Condensed', sans-serif;
+    fill: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #018bbc; /* Ocean blue background */
+}
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    background-size: 50% 150px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="20" viewBox="0 0 160 20"><path fill="rgba(255,255,255,0.5)" d="M0 0v20c20 0 40-40 60-40s40 40 60 40 40-40 60-40 40 40 60 40v-20H0z"/></svg>');
+    animation: wave 10s linear infinite;
+    z-index: -1;
+}
+
+body::after {
+    transform: rotate(90deg);
+}
+
+@keyframes wave {
+    0% { transform: translate3d(-25%, 0, 0); }
+    100% { transform: translate3d(25%, 0, 0); }
+}
+
+#chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #06456e 0%, #00090f 100%);
+}
+
+.bubble {
+    fill-opacity: 0.7;
+    stroke-width: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.bubble:hover {
+    stroke: #fff;
+    stroke-width: 1.5px; /* White border on hover */
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 4px;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
